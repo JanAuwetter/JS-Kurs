@@ -1,0 +1,29 @@
+#logo-text {
+  font-size: 58pt;
+  color: #ff0000;
+  text-align: center;
+  padding: 50px;
+  }
+
+.form-label2 {
+  font-weight: bold;
+}
+
+.logo-description {
+  font-size: 20pt
+  color: blue;
+}
+
+.position-top {
+  position: absolute;
+  z-index: 5;
+  margin-top: 25px;
+  margin-left: 100px;
+
+}
+
+.position-top1 {
+  position: absolute;
+  z-index: 5;
+  margin-top: 20px;
+  margin-left: 100px;
