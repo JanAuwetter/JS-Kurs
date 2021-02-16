@@ -2,15 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type= "text/javascript" src="./js/javascript.js"></script>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <title>Startseite</title>
+    <script type= "text/javascript" src="js/model/user.js"></script>
+    <script type= "text/javascript" src="js/services/userService.js"></script>
+    <title>User</title>
   </head>
-  <body>
+  <body onload="UserService.init()">
+    <table width="300" border="1">
+      <thead>
+      <tr id="header"/>
 
-
+      </tr>
+      </thead>
+      <tbody id="content"/>
   </body>
 </html>
