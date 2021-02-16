@@ -2,7 +2,7 @@ class UserService {
 
   static init(){
     var user = UserService.createUser(1, "Herbert", "xxxx", "herbert@gmx.de", "01.01.1900");
-    UserService.displayUser(user);
+  //  UserService.displayUser(user);
     UserService.createTableHeader(user);
   }
 
@@ -19,25 +19,15 @@ class UserService {
       result = result + columnName;
 
     }
-
-document.getElementById("header").innerHTML = result;
-
-
-  }
-  static displayUser(user) {
-
     var columnValueArray = Object.values(user);
-    var result ="<tr>";
+    var result2 ="<tr>";
     for (var i = 0; i < columnValueArray.length; i++) {
       var columnValue = "<td>" + columnValueArray[i] + "</td>";
-      result = result + columnValue;
+      result2 = result2 + columnValue;
 
-    }
-    document.getElementById("content").innerHTML = result + "</tr>";
-
+    document.getElementById("header").innerHTML = result;
+    document.getElementById("content").innerHTML = result2 + "</tr>";
   }
 
-  static changePassword(oldPassword, newPassword, repeatNewPassword){
-    return "passwordChanged";
-  }
+}
 }
