@@ -2,8 +2,15 @@ class UserService {
 
   static init(){
     var user = UserService.createUser(1, "Herbert", "xxxx", "herbert@gmx.de", "01.01.1900");
-  //  UserService.displayUser(user);
-    UserService.createTableHeader(user);
+    var user2 = UserService.createUser(2, "Franz", "xxxx", "franz@gmx.de", "01.01.1900");
+
+    var userList = new UserList();
+    userList.addUser(user);
+    userList.addUser(user2);
+
+    console.log(userList.users);
+    UserService.createTableHeaderAndContent(user);
+    UserService.showUsers(userList.users);
   }
 
   static createUser(id, name, password, email, birthday){
@@ -11,23 +18,35 @@ class UserService {
       return user;
   }
 
-  static createTableHeader(user){
-    var columnNames = Object.keys(user);
-    var result ="";
-    for (var i = 0; i < columnNames.length; i++) {
-      var columnName = "<th>" + columnNames[i] + "</th>";
-      result = result + columnName;
-
+  static showUsers(userList){
+    var reslut = [];
+    var resultContent ="";
+    for (var i = 0; i < userList.length; i++) {
+      resultContent = resultContent + "<tr>";
+      let user = userList[i];
+      console.log(user);
+      reslut =  UserService.createTableHeaderAndContent(user);
+      resultContent = resultContent + reslut[1] + "</tr>";
     }
-    var columnValueArray = Object.values(user);
-    var result2 ="<tr>";
-    for (var i = 0; i < columnValueArray.length; i++) {
-      var columnValue = "<td>" + columnValueArray[i] + "</td>";
-      result2 = result2 + columnValue;
-
-    document.getElementById("header").innerHTML = result;
-    document.getElementById("content").innerHTML = result2 + "</tr>";
+      document.getElementById("header").innerHTML = result[0];
+      document.getElementById("content").innerHTML = resultContent;
   }
 
-}
+  static createTableHeaderAndContent(user){
+    var columnNames = Object.keys(user);
+    var columnValueArray = Object.values(user);
+
+    var resultHeader ="";
+    var resultContent ="<tr>";
+
+    for (var i = 0; i < columnNames.length; i++) {
+      var columnName = "<th>" + columnNames[i] + "</th>";
+      resultHeader = resultHeader + columnName;
+
+      var columnValue = "<td>" + columnValueArray[i] + "</td>";
+      resultContent = resultContent + columnValue;
+    }
+    return [resultHeader, resultContent]
+
+  }
 }
