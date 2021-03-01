@@ -4,58 +4,21 @@
     <meta charset="utf-8">
     <script type= "text/javascript" src="js/model/user.js"></script>
     <script type= "text/javascript" src="js/services/userService.js"></script>
+    <script type= "text/javascript" src="js/services/EmployeeService.js"></script>
     <script type= "text/javascript" src="js/model/userList.js"></script>
     <script type= "text/javascript" src="js/model/address.js"></script>
+    <script type= "text/javascript" src="js/model/employee.js"></script>
     <title>User</title>
   </head>
-  <body>
-    <script type="text/javascript">
 
-
-
-    var value = ("http://webservi/antwort.htm?name=Pillepalle&vor=Herbert&B1=Abschicken")
-    document.write("Hauptstring: " + value + "<br><br>");
-
-    var test_toString = value.toString();
-    document.write("Es wird der Wert vom String ausgegeben: " + test_toString + "<br><br>");
-
-    var test_length = value.length;
-    document.write("Der String hat eine Länge von:  " + test_length + " Stellen<br><br>");
-
-    var test_charAt = value.charAt(0);
-    document.write("Der erste Buchstabe im String lautet: " + test_charAt + "<br><br>");
-
-    var test_indexOf = value.indexOf(`name`, 0);
-    document.write("Ab dieser Stelle fängt 'name' an: " + test_indexOf + "<br><br>");
-
-    var test_lastIndexOf = value.lastIndexOf(`o`, 8);
-    document.write("Da kein 'o' vorhanden ist, wird : " + test_lastIndexOf + " ausgegeben <br><br> ");
-
-    var test_substring = value.substring(3,12);
-    document.write("Ab der 3. Stelle die 12 weiteren Stellen:  " + test_substring + "<br><br>");
-
-    var test_lowerCase = value.toLowerCase();
-    document.write("Alle Stellen vom String werden klein geschrieben :" + test_lowerCase + "<br><br>");
-
-    var test_upperCase = value.toUpperCase();
-    document.write("Alle Stellen vom String werden gross geschrieben :" + test_upperCase + "<br><br>");
-
-    var vorname = value.substring(48, 55);
-    document.write("Der Vorname lautet: " + vorname + "<br><br>");
-
-    var name = value.substring(33, 43);
-    document.write("Der Nachname lautet: " + name + "<br><br>");
-
-    </script>
-  </body>
-<!--  <body onload="UserService.init()">
+<body onload="UserService.init()">
     <table width="300" border="1">
       <thead>
       <tr id="header"/>
 
-      </tr>
+
       </thead>
       <tbody id="content"/>
     </table>
-  </body>-->
+  </body>
 </html>

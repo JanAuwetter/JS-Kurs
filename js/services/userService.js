@@ -2,7 +2,7 @@ class UserService {
 
   static init(){
 
-    console.log(document);
+  //  console.log(document);
     var user = UserService.createUser(1, "Herbert", "xx55xx", "herbert@gmx.de", "01.01.1900");
     var user2 = UserService.createUser(2, "Franz", "xxdsdxx", "franz@gmx.de", "01.01.19345");
     var user3 = UserService.createUser(3, "Klaus", "xxdsfx", "Klaus@gmx.de", "01.01.1930");
@@ -22,7 +22,7 @@ class UserService {
   //  console.log(userList.users);
 
     UserService.showUsers(userList.users);
-    console.log(userList);
+//    console.log(userList);
 
   }
 
